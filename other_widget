@@ -1,0 +1,29 @@
+import 'package:flutter/material.dart';
+class My_Column extends StatelessWidget {
+  final String num;
+  final String text;
+  const My_Column(this.num,this.text);
+
+  @override
+  Widget build(BuildContext context) {
+return Column(
+  mainAxisAlignment: MainAxisAlignment.center,
+  children: [
+    Text(num,
+      style: TextStyle(
+          color: Colors.white,
+          fontSize: 23,
+          fontWeight: FontWeight.normal
+      ),
+    ),
+    SizedBox(height: 5,),
+    Text(text,
+      style: TextStyle(
+          color: Colors.white60,
+          fontSize: 15,
+          fontWeight: FontWeight.normal
+      ),)
+  ],
+);
+  }
+}

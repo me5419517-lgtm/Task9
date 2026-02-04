@@ -1,0 +1,119 @@
+import 'package:flutter/material.dart';
+import 'package:untitled/My_Column.dart';
+class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        centerTitle: true,
+        leading: Icon(Icons.arrow_back),
+        title: Image.asset(
+          'Assets/Images/logo.png',
+              width: 50,
+        ),
+        actions: [
+          Icon(Icons.message),
+          Icon(Icons.menu),
+        ],
+      ),
+      body: Column(
+        children: [
+          SizedBox(height: 40,),
+          Center(
+            child: CircleAvatar(
+              radius: 50,
+              backgroundImage: AssetImage('Assets/Images/Girl_1.jpg'),
+
+            ),
+          ),
+          SizedBox(height: 25,),
+          Text("Malak Emad",
+            style: TextStyle(
+              fontSize: 30,
+              fontWeight: FontWeight.bold
+            ),
+          ),
+          Text("Mobile Developer",
+              style:TextStyle(
+                color: Colors.black87,
+                fontSize: 20,
+              )
+          ),
+          Text("Egypt,Giza",
+              style:TextStyle(
+                color: Colors.black54,
+                fontSize: 15,
+              )
+          ),
+          SizedBox(height: 10,),
+          Container(
+          width: 150,
+          height: 60,
+            child: Center(child: Text("Connect",
+                style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+                ),
+            )
+            ),
+            decoration: BoxDecoration(
+              color: Color(0xFF187EB9)
+            ),
+          ),
+          SizedBox(height: 8,),
+          Text("3 Shared Connections",
+              style:TextStyle(
+                color: Colors.black54,
+                fontSize: 18,
+              )
+          ),
+          SizedBox(height: 8,),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              CircleAvatar(
+                radius: 30,
+                backgroundImage: AssetImage('Assets/Images/Girl_2.jpg'),
+              ),
+              CircleAvatar(
+                radius: 30,
+                backgroundImage: AssetImage('Assets/Images/Girl_3.jpg'),
+              ),
+              CircleAvatar(
+                radius: 30,
+                backgroundImage: AssetImage('Assets/Images/Girl_4.jpg'),
+              ),
+            ],
+          ),
+          SizedBox(height: 10,),
+          Container(
+            height: 100,
+            width: double.infinity,
+            color: Color(0xFF00868F),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                My_Column("2.5K","Connections"),
+              VerticalDivider(
+                color: Colors.white60,
+              ),
+                My_Column("300","Endorsement"),
+                VerticalDivider(
+                  color: Colors.white60,
+                ),
+                My_Column("20","Recommends"),
+                VerticalDivider(
+                  color: Colors.white60,
+                ),
+                My_Column("15","Posts"),
+
+              ],
+            ),
+          )
+        ],
+      ),
+    );
+  }
+}
